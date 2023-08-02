@@ -1,38 +1,45 @@
 <?php
+// Logical AND operator (&&)
+$age = 25;
+$isStudent = true;
 
-//array_chunk()
-$numbers = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-$chunks = array_chunk($numbers, 3);
+if ($age >= 18 && $isStudent) {
+    echo "You are eligible for a student discount.";
+} else {
+    echo "You are not eligible for a student discount.";
+}
 
-echo "<pre>";
-var_dump($chunks);
-echo "</pre>";
+echo "<br>";
+
+// Logical OR operator ()
+$hasCoupon = false;
+$hasPromoCode = true;
+
+if ($hasCoupon or $hasPromoCode) {
+    echo "You can apply a discount to your purchase.";
+} else {
+    echo "No discount available.";
+}
+
+echo "<br>";
+
+// Logical NOT operator (!)
+$isPremiumUser = false;
+
+if (!$isPremiumUser) {
+    echo "You need to be a premium user to access this feature.";
+} else {
+    echo "Welcome, premium user!";
+}
 
 
-//array_column()
-$students = array(
-    array('name' => 'John', 'grade' => 85),
-    array('name' => 'Lisa', 'grade' => 92),
-    array('name' => 'Mark', 'grade' => 78),
-    array('name' => 'Susan', 'grade' => 88),
-);
+// Logical XOR operator
+$x = 100;
+$y = 50;
 
-print_r(array_column($students, 'grade'));
-
-
-//multidiminsional array
-
-$matrix = array(
-    array(1, 2, 3),
-    array(4, 5, 6),
-    array(7, 8, 9)
-);
-
-echo $matrix[1][2];
-
-echo "<pre>";
-print_r($matrix[1]);
-echo "<\pre>"
+if ($x == 100 xor $y == 80) {
+    echo "<br> Hello world!";
+}
 
 
 ?>
