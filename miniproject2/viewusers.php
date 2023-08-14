@@ -11,7 +11,7 @@ if ($conn->connect_error) {
 
 // Check if the user is a super user
 // Replace 'user_type_column' with the actual column name in your database that represents the user type
-$sql = "SELECT user_type FROM logininfo WHERE user_type = 'super_user'";
+$sql = "SELECT is_admin FROM logininfo WHERE is_admin = '1'";
 $result = $conn->query($sql);
 
 // If the user is a super user, display the table

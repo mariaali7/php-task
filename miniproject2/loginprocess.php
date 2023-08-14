@@ -17,17 +17,17 @@ $password = $_POST['password'];
 // Your validation logic goes here
 
 // Assuming the user is authenticated and the credentials are valid
-$sql = "SELECT first_name, middle_name, last_name, family_name, user_type FROM logininfo WHERE email = '$email'";
+$sql = "SELECT first_name, middle_name, last_name, family_name, is_admin FROM logininfo WHERE email = '$email'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
   $row = $result->fetch_assoc();
   
   // Check if the 'user_type' key exists in the result
-  if (isset($row['user_type'])) {
-    $userType = $row['user_type'];
+  if (isset($row['is_admin'])) {
+    $admin = $row['is_admin'];
 
-    if ($userType === 'super_user') {
+    if ($admin === '1') {
       header("Location: viewusers.php");
     } else {
       session_start();

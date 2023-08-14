@@ -14,7 +14,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $day = $_POST['day'];
   $month = $_POST['month'];
   $year = $_POST['year'];
-  $userType = $_POST['user_type'];
+  $admin = $_POST['is_admin']
+  
   $dayErr = $monthErr = $yearErr = ""; // Added semicolon at the end of the line
 
   // Validate form data
@@ -71,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   }
 
   // Insert user data into the database
-  $sql = "INSERT INTO logininfo (email, mobile, first_name, middle_name, last_name, family_name, password, dob, user_type) VALUES ('$email', '$mobile', '$firstName', '$middleName', '$lastName', '$familyName', '$password', '$year-$month-$day', '$userType')";
+  $sql = "INSERT INTO logininfo (email, mobile, first_name, middle_name, last_name, family_name, password, dob ,is_admin) VALUES ('$email', '$mobile', '$firstName', '$middleName', '$lastName', '$familyName', '$password', '$year-$month-$day',$admin )";
   if ($conn->query($sql) === TRUE) {
     // Redirect the user to the login page
     header("Location: login.html");

@@ -70,14 +70,7 @@
   <span class="error"><?php echo "$dayErr $monthErr $yearErr"; ?></span>
 
   <br>
-  
-    <!-- User Type field -->
-    <label for="user_type">User Type:</label>
-    <select id="user_type" name="user_type" required>
-      <option value="">Select User Type</option>
-      <option value="user">User</option>
-      <option value="super_user">Super User</option>
-    </select><br><br>
+
 
     <input type="submit" value="Sign Up">
   </form>

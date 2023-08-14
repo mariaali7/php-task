@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Login</title>
-  <style>
-    body {
+body {
     background-color: #F6F4EB;
     font-family: Arial, sans-serif;
   }
@@ -40,19 +35,3 @@
   input[type="submit"]:hover {
     background-color: #749BC2;
   }
-  </style>
-</head>
-<body>
-  <h2>Login</h2>
-  <form action="loginprocess.php" method="POST">
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required><br><br>
-
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required><br><br>
-
-    <input type="submit" value="Login">
-  </form>
-  <script src="main.js"></script>
-</body>
-</html>
